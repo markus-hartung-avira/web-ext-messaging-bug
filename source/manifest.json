@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Web Extensions Messaging Bug",
+  "version": "0.1.0",
+
+  "description": "Demo extension to demonstrate messaging bug",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }],
+
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "web-ext-messaging-bug@avira.com",
+      "strict_min_version": "47.0"
+    }
+  }
+}
